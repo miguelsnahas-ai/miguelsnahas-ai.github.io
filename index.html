@@ -264,6 +264,17 @@
     background: var(--plum); padding: 0 12px; font-weight: 600; font-size: 13px; color: var(--pers-light);
   }
   .loop-note { display: none; }
+  .phase-labels { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin: 4px 0 22px; }
+  .phase-labels span { margin-right: 20px; padding-top: 8px; border-top: 2px solid var(--pers-light); font-weight: 600; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--pers-light); }
+  .traction-block { margin-top: 40px; display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 24px 48px; align-items: center; padding: clamp(22px, 3vw, 32px); border: 1.5px solid var(--pers); border-radius: 16px; background: var(--plum-2); }
+  .traction-block .phase-tag { font-weight: 600; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--pers-light); margin-bottom: 8px; }
+  .traction-block h3 { font-size: clamp(24px, 2.6vw, 32px); line-height: 1.1; margin-bottom: 10px; }
+  .traction-block p { color: var(--on-plum); font-size: 15.5px; }
+  .tr-tools { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tr-tools li { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; padding: 6px 12px 6px 6px; border: 1px solid var(--plum-line); border-radius: 999px; background: var(--plum); color: #FFFFFF; }
+  .tr-tools b { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: var(--pers); color: var(--ink); font-size: 12px; }
+    .stage-phase { display: none; }
+  @media (max-width: 1020px) { .phase-labels { display: none; } .traction-block { grid-template-columns: 1fr; } .stage-phase { display: inline-block; margin-left: 10px; font-weight: 600; font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--pers-light); vertical-align: middle; } }
 
   @media (max-width: 1020px) {
     .stages { grid-template-columns: 1fr; gap: 0; }
@@ -557,34 +568,35 @@
         <p class="eyebrow"><svg class="ast" aria-hidden="true"><use href="#ast"/></svg>O método</p>
         <h2 class="h-section" id="method-title">Da ideia às <span>primeiras evidências</span>, uma decisão por vez.</h2>
       </div>
-      <p class="lead">Cinco etapas, cada uma com ferramentas práticas.</p>
+      <p class="lead">Três fases: descobrir, validar e ganhar tração. Cada etapa com ferramentas práticas.</p>
     </div>
 
+    <div class="phase-labels" aria-hidden="true"><span style="grid-column: 1 / 3">Fase 1 · Discovery</span><span style="grid-column: 3 / 6">Fase 2 · Validation</span></div>
     <ol class="stages">
       <li class="stage reveal">
         <div class="stage-top"><span class="stage-dot" aria-hidden="true"></span></div>
-        <span class="stage-num">01</span>
+        <span class="stage-num">01</span><span class="stage-phase">Discovery</span>
         <h3>Entender</h3>
         <p>Investigar o problema e as pessoas.</p>
         <div class="tools"><span>Ferramentas</span><ul><li>Avaliação de mercado</li><li>Jobs to Be Done</li><li>Roteiro de entrevista</li><li>Journey Map</li></ul></div>
       </li>
       <li class="stage reveal">
         <div class="stage-top"><span class="stage-dot" aria-hidden="true"></span></div>
-        <span class="stage-num">02</span>
+        <span class="stage-num">02</span><span class="stage-phase">Discovery</span>
         <h3>Explorar</h3>
         <p>Formular hipóteses e o que aprender.</p>
-        <div class="tools"><span>Ferramentas</span><ul><li>Beachhead Market</li><li>Matriz CSD</li><li>Problem Statement</li><li>Working Backwards</li></ul></div>
+        <div class="tools"><span>Ferramentas</span><ul><li>Beachhead Market</li><li>Matriz CSD</li><li>Problem Statement</li><li>Importância × satisfação</li></ul></div>
       </li>
       <li class="stage reveal">
         <div class="stage-top"><span class="stage-dot" aria-hidden="true"></span></div>
-        <span class="stage-num">03</span>
+        <span class="stage-num">03</span><span class="stage-phase">Validation</span>
         <h3>Experimentar</h3>
         <p>Testar com entrevistas, protótipos e MVPs.</p>
-        <div class="tools"><span>Ferramentas</span><ul><li>Seleção de MVP</li><li>Critérios de saída</li></ul></div>
+        <div class="tools"><span>Ferramentas</span><ul><li>Working Backwards</li><li>Seleção de MVP</li><li>Critérios de saída</li></ul></div>
       </li>
       <li class="stage stage-validar reveal">
         <div class="stage-top"><span class="stage-dot" aria-hidden="true"></span></div>
-        <span class="stage-num">04</span>
+        <span class="stage-num">04</span><span class="stage-phase">Validation</span>
         <h3>Validar</h3>
         <p>Confrontar suposições com sinais reais.</p>
         <div class="tools"><span>Ferramentas</span><ul><li>Build, Measure, Learn</li><li>CSD atualizada</li><li>Métricas iniciais</li></ul></div>
@@ -595,13 +607,23 @@
       </li>
       <li class="stage stage-last reveal">
         <div class="stage-top"><span class="stage-dot" aria-hidden="true"></span></div>
-        <span class="stage-num">05</span>
+        <span class="stage-num">05</span><span class="stage-phase">Validation</span>
         <h3>Avançar</h3>
         <p>Transformar evidências em decisões.</p>
         <div class="tools"><span>Ferramentas</span><ul><li>Stress test</li><li>Modelo de negócio</li></ul></div>
       </li>
       <li class="loop" aria-hidden="true"><p>↺ Aprendeu algo novo? Revise a hipótese e teste de novo.</p></li>
     </ol>
+    <div class="traction-block">
+      <div>
+        <p class="phase-tag">Fase 3 · Traction</p>
+        <h3>Dos primeiros clientes a um processo que se repete.</h3>
+        <p>Depois de validar, o trabalho é conquistar clientes reais e descobrir o que, na aquisição e na entrega de valor, pode virar processo. Tração não é escala.</p>
+      </div>
+      <ol class="tr-tools">
+        <li><b>1</b>First Customers</li><li><b>2</b>Go-to-Market</li><li><b>3</b>Sales Playbook</li><li><b>4</b>Traction Channels</li><li><b>5</b>Traction Metrics</li><li><b>6</b>Unit Economics</li><li><b>7</b>Activation, Retention &amp; Review</li>
+      </ol>
+    </div>
     <p class="visually-hidden">O método é iterativo: o aprendizado da etapa Validar pode levar de volta à etapa Explorar, com hipóteses revisadas e novos experimentos.</p>
 
 
@@ -609,13 +631,13 @@
       <div>
         <h3>Cada etapa termina em uma decisão e um entregável.</h3>
         <p>Um mapa, uma matriz, um critério de parada.</p>
-        <a class="text-link" href="/zero-to-first/toolkit/" data-entry-link data-cta="method_toolkit">Ver as 18 ferramentas na Mesa de Trabalho
+        <a class="text-link" href="/zero-to-first/toolkit/" data-entry-link data-cta="method_toolkit">Ver as 27 ferramentas na Mesa de Trabalho
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
       </div>
 
       <figure class="board" aria-label="Exemplo ilustrativo de ferramentas da Mesa de Trabalho: matriz CSD, matriz de importância versus satisfação, uma hipótese e um experimento com critérios de saída">
         <div class="card card-csd">
-          <div class="card-title"><b>Matriz CSD</b><span class="tag">Problem Framing</span></div>
+          <div class="card-title"><b>Matriz CSD</b><span class="tag">Discovery</span></div>
           <div class="csd">
             <div><span class="tag">Certezas</span><span class="c">A dor aparece toda semana</span></div>
             <div><span class="tag">Suposições</span><span class="s tilt">Pagariam para economizar tempo</span></div>
