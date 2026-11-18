@@ -313,19 +313,6 @@
   }
 
   /* ============================ TRAJETÓRIA ============================ */
-  /* ============================ CASES ============================ */
-  .cases-section { border-top: 1px solid var(--line); }
-  .cases { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px; }
-  .case { display: flex; flex-direction: column; padding: 28px 26px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; }
-  .case-logo { display: block; width: auto; height: auto; max-width: 130px; max-height: 34px; filter: grayscale(1) contrast(1.1); mix-blend-mode: multiply; margin-bottom: 14px; }
-  .case-mark { font-stretch: 75%; font-weight: 700; font-size: 20px; text-transform: uppercase; letter-spacing: .02em; color: var(--ink-soft); filter: none; mix-blend-mode: normal; }
-  .case h3 { font-size: clamp(24px, 2.4vw, 30px); margin-bottom: 14px; }
-  .case dl { margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 0 28px; border-top: 1px solid var(--line); }
-  .case dl > div { padding: 12px 0; border-bottom: 1px solid var(--line); }
-  .case dt { font-weight: 600; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
-  .case dd { margin: 0; font-size: 16px; color: var(--ink-soft); }
-  .case .case-result dd { font-family: var(--serif); font-size: 20px; line-height: 1.3; color: var(--ink); }
-
   /* ============================ SOBRE ============================ */
   .about-grid { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: clamp(32px, 6vw, 80px); align-items: start; }
   .about-text .h-section { margin-bottom: 24px; }
@@ -410,7 +397,6 @@
   /* ============================ MOVIMENTO ============================ */
   .pending { display: none !important; }
   .draft .pending { display: revert !important; outline: 2px dashed var(--pers); outline-offset: 4px; }
-  .draft .case.pending { display: flex !important; }
   .js .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
   .js .reveal.is-in { opacity: 1; transform: none; }
   @media (prefers-reduced-motion: reduce) { .js .reveal { opacity: 1; transform: none; transition: none; } }
@@ -447,7 +433,6 @@
       <ul class="nav-links" id="nav-links">
         <li><a class="nav-link" href="#como-trabalho" data-cta="nav_como">Como trabalho</a></li>
         <li><a class="nav-link" href="#formas-de-trabalhar" data-cta="nav_formas">Formas de trabalhar</a></li>
-        <li><a class="nav-link" href="#cases" data-cta="nav_cases">Cases</a></li>
         <li><a class="nav-link" href="#sobre" data-cta="nav_sobre">Sobre</a></li>
       </ul>
       <a class="btn btn-primary btn-small" href="#agendar" data-schedule data-cta="nav_schedule">Agendar conversa</a>
@@ -606,48 +591,6 @@
       <a class="btn btn-secondary" href="/zero-to-first/toolkit/" data-entry-link data-cta="offer_mesa">Acessar o toolkit
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
     </article>
-  </div>
-</section>
-
-<!-- ============================ 6. CASES ============================ -->
-<!-- Não inventar resultados, números ou nomes. Itens com a classe "pending" só aparecem com ?rascunho no endereço. -->
-<section class="section cases-section" id="cases" aria-labelledby="cases-title">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <p class="eyebrow"><svg class="ast" aria-hidden="true"><use href="#ast"/></svg>Cases</p>
-        <h2 class="h-section" id="cases-title">Do caminho à venda, na prática.</h2>
-      </div>
-    </div>
-    <div class="cases">
-      <article class="case reveal" aria-labelledby="case-dojo">
-        <img class="case-logo" src="assets/dojo.png" alt="" width="900" height="338" loading="lazy" decoding="async">
-        <h3 id="case-dojo">Future Dojo</h3>
-        <dl>
-          <div><dt>Contexto</dt><dd>Escola de competências do futuro que cofundei, joint venture de ACE e EXAME, investida do BTG Pactual.</dd></div>
-          <div><dt>O que foi feito</dt><dd>Venda de treinamentos e jornadas B2B para Ajinomoto, Honda, EDP e Comgás. <span class="pending">[PREENCHER: detalhes adicionais]</span></dd></div>
-          <div class="case-result"><dt>Resultado</dt><dd>Do zero a 10 pessoas e 7 dígitos de receita anual.</dd></div>
-        </dl>
-      </article>
-      <article class="case pending" aria-labelledby="case-link">
-        <img class="case-logo" src="assets/link.png" alt="" width="900" height="138" loading="lazy" decoding="async">
-        <h3 id="case-link">Startup School na Link</h3>
-        <dl>
-          <div><dt>Contexto</dt><dd>[PREENCHER]</dd></div>
-          <div><dt>O que foi feito</dt><dd>[PREENCHER]</dd></div>
-          <div class="case-result"><dt>Resultado</dt><dd>[PREENCHER]</dd></div>
-        </dl>
-      </article>
-      <article class="case pending" aria-labelledby="case-consult">
-        <p class="case-logo case-mark">Consultoria</p>
-        <h3 id="case-consult">[PREENCHER: nome do projeto ou do cliente]</h3>
-        <dl>
-          <div><dt>Contexto</dt><dd>[PREENCHER]</dd></div>
-          <div><dt>O que foi feito</dt><dd>[PREENCHER]</dd></div>
-          <div class="case-result"><dt>Resultado</dt><dd>[PREENCHER]</dd></div>
-        </dl>
-      </article>
-    </div>
   </div>
 </section>
 
