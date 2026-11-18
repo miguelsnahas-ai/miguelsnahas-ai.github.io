@@ -1,21 +1,27 @@
 # Miguel Nahas
 
-> Estratégia, empreendedorismo e educação empreendedora. Facilitador do método Zero to First: da ideia aos primeiros clientes, uma decisão por vez.
+> Encontro os caminhos que o seu negócio ainda não viu. E te ajudo a escolher o certo e vender.
 
 ## Quem é
-- Ventures Lead na Link School of Business: educação empreendedora e ecossistema de startups.
-- Facilitador do método Zero to First, com a Mesa de Trabalho gratuita (27 ferramentas em três fases: Discovery, Validation e Traction).
-- Cofundador e liderança executiva da Future Dojo, escola de competências do futuro, joint venture de ACE e EXAME, investida do BTG Pactual. Do zero aos 7 dígitos de receita em um ano, mais de 6 mil alunos (B2C e B2B) e NPS 92.
-- Sócio da ACE Ventures: cultura, desenvolvimento organizacional e parcerias.
-- Consultoria de inovação, estratégia e treinamento para empresas como Globo, BTG Pactual, Ajinomoto, Comgás, FTD, Renner, BRF, Eneva e Grupo Águia Branca.
+- Cofundei a Future Dojo, escola de competências do futuro, joint venture de ACE e EXAME, investida do BTG Pactual. Levei a empresa do zero a 10 pessoas e 7 dígitos de receita anual, vendendo treinamentos e jornadas B2B para Ajinomoto, Honda, EDP e Comgás. Em um ano, saímos do zero aos 7 dígitos de receita; foram mais de 6 mil alunos (B2C e B2B) e NPS 92.
+- Hoje lidero a educação empreendedora da Link School of Business (Startup School).
+- Fui sócio da ACE Ventures e fiz projetos de inovação, estratégia e treinamento para empresas como Globo, BTG Pactual, Ajinomoto, Comgás, FTD, Renner, BRF, Eneva e Grupo Águia Branca.
 - Mais de 100 startups mentoradas e aceleradas; mais de 100 aulas, palestras e podcasts.
 
-## Como trabalhar junto
-- Mesa de Trabalho (gratuita, para aplicar o método sozinho): https://miguelsnahas-ai.github.io/zero-to-first/toolkit/
-- Palestras, workshops e programas de educação empreendedora.
-- Estratégia, consultoria e advisory, com formato definido caso a caso.
+## Como trabalho
+1. Abrir caminhos: modelo o negócio, analiso os números e mostro opções não óbvias.
+2. Dar foco: comparo os caminhos e ajudo a escolher o certo.
+3. Vender: transformo o caminho escolhido em oferta e coloco na mão do cliente.
+
+Mais importante do que outro brainstorming é ter cliente pagando.
+
+## Formas de trabalhar
+- Mapa de Caminhos: modelagem e análise do negócio, 2 a 3 caminhos possíveis com prós e contras e recomendação de foco.
+- Sprint de Primeira Venda: transformar o caminho escolhido em oferta e vendê-la em até 30 dias.
+- Programas e Workshops: educação empreendedora, palestras e jornadas sobre modelo de negócio, validação, vendas e IA no trabalho, para empresas, escolas e aceleradoras.
+- Mesa de Trabalho Zero to First: toolkit com IA para ir do zero ao primeiro cliente pagante, em pagamento único de R$ 27,90.
 
 ## Links
 - Site: https://miguelsnahas-ai.github.io/
-- Mesa de Trabalho: https://miguelsnahas-ai.github.io/zero-to-first/toolkit/
+- Método Zero to First e Mesa de Trabalho: https://miguelsnahas-ai.github.io/zero-to-first/
 - LinkedIn: https://www.linkedin.com/in/miguelnahas/
