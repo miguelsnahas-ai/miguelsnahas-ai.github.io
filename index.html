@@ -247,18 +247,45 @@
   /* ============================ COMO TRABALHO ============================ */
   .method .h-section span { font-style: italic; color: var(--pers-light); }
   .tag { font-weight: 600; font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
-  .moves { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-  .move { display: flex; flex-direction: column; gap: 10px; padding: 28px 26px; border: 1px solid var(--plum-line); border-radius: 16px; background: var(--plum-2); }
+  /* Como trabalho: quatro movimentos em ciclo */
+  .cycle { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 240px minmax(0, 1fr); grid-template-rows: auto auto; gap: 18px 28px; align-items: stretch; }
+  .move { position: relative; display: flex; flex-direction: column; gap: 10px; padding: 26px 26px; border: 1px solid var(--plum-line); border-radius: 16px; background: var(--plum-2); }
+  .move:nth-child(1) { grid-column: 1; grid-row: 1; }
+  .move:nth-child(2) { grid-column: 3; grid-row: 1; }
+  .move:nth-child(3) { grid-column: 3; grid-row: 2; }
+  .move:nth-child(4) { grid-column: 1; grid-row: 2; }
+  .move.is-loop { border-color: rgba(242, 138, 94, .55); background: linear-gradient(160deg, rgba(224, 89, 42, .16), var(--plum-2) 60%); }
+  .move-head { display: flex; align-items: baseline; gap: 14px; }
   .move-num { font-family: var(--serif); font-style: italic; font-size: 40px; line-height: 1; color: var(--pers-light); }
   .move h3 { font-family: var(--sans); font-stretch: 75%; font-weight: 700; font-size: 32px; text-transform: uppercase; letter-spacing: .01em; line-height: 1; }
   .move p { color: var(--on-plum); font-size: 16.5px; line-height: 1.55; }
   .move .move-out { margin-top: auto; padding-top: 14px; border-top: 1px solid var(--plum-line); color: #FFFFFF; font-size: 15.5px; }
   .move-out span { display: block; font-weight: 600; font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--pers-light); margin-bottom: 4px; }
+  .move-tag { position: absolute; top: 18px; right: 18px; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--pers-light); border: 1px solid rgba(242, 138, 94, .5); border-radius: 999px; padding: 3px 10px; }
+  .ring { grid-column: 2; grid-row: 1 / 3; align-self: center; position: relative; width: 240px; height: 240px; }
+  .ring svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  .ring .spin { transform-origin: 120px 120px; animation: ring-spin 30s linear infinite; }
+  .ring-center { position: absolute; inset: 52px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 4px; padding: 10px; }
+  .ring-center b { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 26px; line-height: 1; color: #FFFFFF; }
+  .ring-center small { font-size: 12.5px; line-height: 1.35; color: var(--on-plum); }
+  .loop-note { display: none; }
+  @keyframes ring-spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .ring .spin { animation: none; } }
+  @media (max-width: 1100px) { .cycle { grid-template-columns: minmax(0, 1fr) 190px minmax(0, 1fr); gap: 16px 20px; } .ring { width: 190px; height: 190px; } .ring-center { inset: 40px; } .ring-center b { font-size: 21px; } .ring-center small { font-size: 11.5px; } .move h3 { font-size: 28px; } }
+  @media (max-width: 900px) {
+    .cycle { grid-template-columns: 1fr; gap: 0; }
+    .move:nth-child(n) { grid-column: 1; grid-row: auto; }
+    .move + .move { margin-top: 30px; }
+    .move + .move::before { content: ""; position: absolute; left: 44px; top: -31px; width: 2px; height: 30px; background: linear-gradient(var(--plum-line), var(--pers-light)); }
+    .ring { display: none; }
+    .loop-note { display: flex; align-items: center; gap: 12px; margin-top: 14px; padding: 14px 18px; border: 1px dashed rgba(242, 138, 94, .6); border-radius: 14px; color: #FFFFFF; font-size: 15px; line-height: 1.4; }
+    .loop-note svg { flex: none; width: 28px; height: 28px; color: var(--pers-light); }
+  }
   .belief { margin-top: clamp(40px, 6vw, 64px); display: grid; grid-template-columns: 1fr auto; gap: 10px 32px; align-items: end; padding-top: 28px; border-top: 1.5px solid var(--pers); }
   .belief p { font-family: var(--serif); font-size: clamp(26px, 3.2vw, 40px); line-height: 1.15; max-width: 26ch; color: #FFFFFF; }
   .belief .text-link { color: #FFFFFF; }
   .belief small { grid-column: 1 / -1; font-size: 14px; color: var(--on-plum); }
-  @media (max-width: 900px) { .moves { grid-template-columns: 1fr; } .belief { grid-template-columns: 1fr; } }
+  @media (max-width: 900px) { .belief { grid-template-columns: 1fr; } }
 
   /* ============================ FRENTES ============================ */
   .offers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
@@ -508,30 +535,50 @@
     <div class="section-head">
       <div>
         <p class="eyebrow"><svg class="ast" aria-hidden="true"><use href="#ast"/></svg>Como trabalho</p>
-        <h2 class="h-section" id="method-title">Três movimentos, do mapa à <span>venda</span>.</h2>
+        <h2 class="h-section" id="method-title">Quatro movimentos, <span>em ciclo</span>.</h2>
       </div>
-      <p class="lead">Cada movimento termina em um entregável concreto, para você decidir com base no que ficou na mesa.</p>
+      <p class="lead">Cada movimento termina em um entregável concreto. Depois da venda, o que os clientes mostram vira o ponto de partida do próximo ciclo.</p>
     </div>
-    <ol class="moves">
-      <li class="move reveal">
-        <span class="move-num">01</span>
-        <h3>Abrir caminhos</h3>
-        <p>Modelo o negócio, analiso os números e mostro opções que não são óbvias.</p>
-        <p class="move-out"><span>Entregável</span>Mapa do negócio com os caminhos possíveis.</p>
-      </li>
-      <li class="move reveal">
-        <span class="move-num">02</span>
-        <h3>Dar foco</h3>
-        <p>Comparo os caminhos com critérios claros e te ajudo a escolher o certo.</p>
-        <p class="move-out"><span>Entregável</span>Recomendação de foco, com prós e contras de cada caminho.</p>
-      </li>
-      <li class="move reveal">
-        <span class="move-num">03</span>
-        <h3>Vender</h3>
-        <p>Transformo o caminho escolhido em oferta e coloco na mão do cliente.</p>
-        <p class="move-out"><span>Entregável</span>Oferta pronta, com preço, e as primeiras conversas de venda.</p>
-      </li>
-    </ol>
+    <div class="cycle">
+      <ol class="moves" style="display:contents">
+        <li class="move reveal">
+          <div class="move-head"><span class="move-num">01</span><h3>Abrir caminhos</h3></div>
+          <p>Modelo o negócio, analiso os números e mostro opções que não são óbvias.</p>
+          <p class="move-out"><span>Entregável</span>Mapa do negócio com os caminhos possíveis.</p>
+        </li>
+        <li class="move reveal">
+          <div class="move-head"><span class="move-num">02</span><h3>Dar foco</h3></div>
+          <p>Comparo os caminhos com critérios claros e te ajudo a escolher o certo.</p>
+          <p class="move-out"><span>Entregável</span>Recomendação de foco, com prós e contras de cada caminho.</p>
+        </li>
+        <li class="move reveal">
+          <div class="move-head"><span class="move-num">03</span><h3>Vender</h3></div>
+          <p>Transformo o caminho escolhido em oferta e coloco na mão do cliente.</p>
+          <p class="move-out"><span>Entregável</span>Oferta pronta, com preço, e as primeiras conversas de venda.</p>
+        </li>
+        <li class="move is-loop reveal">
+          <span class="move-tag">Depois da venda</span>
+          <div class="move-head"><span class="move-num">04</span><h3>Evoluir</h3></div>
+          <p>Acompanho os primeiros resultados, ouço os clientes e ajusto oferta, preço e canal. O que aprendemos abre novos caminhos.</p>
+          <p class="move-out"><span>Entregável</span>Rotina de revisão com métricas e os próximos caminhos a explorar.</p>
+        </li>
+      </ol>
+      <div class="ring" aria-hidden="true">
+        <svg viewBox="0 0 240 240">
+          <circle cx="120" cy="120" r="108" fill="none" stroke="#4D3A52" stroke-width="2"/>
+          <g class="spin"><circle cx="120" cy="120" r="108" fill="none" stroke="#F28A5E" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="120 50"/></g>
+          <g transform="rotate(0 120 120)"><path d="M114 4l10 8-10 8" fill="none" stroke="#F28A5E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g><g transform="rotate(90 120 120)"><path d="M114 4l10 8-10 8" fill="none" stroke="#F28A5E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g><g transform="rotate(180 120 120)"><path d="M114 4l10 8-10 8" fill="none" stroke="#F28A5E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g><g transform="rotate(270 120 120)"><path d="M114 4l10 8-10 8" fill="none" stroke="#F28A5E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
+          <g font-family="Instrument Sans, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">
+            <circle cx="43.6" cy="43.6" r="15" fill="#352338" stroke="#F28A5E" stroke-width="1.5"/><text x="43.6" y="48">01</text>
+            <circle cx="196.4" cy="43.6" r="15" fill="#352338" stroke="#F28A5E" stroke-width="1.5"/><text x="196.4" y="48">02</text>
+            <circle cx="196.4" cy="196.4" r="15" fill="#352338" stroke="#F28A5E" stroke-width="1.5"/><text x="196.4" y="201">03</text>
+            <circle cx="43.6" cy="196.4" r="15" fill="#E0592A" stroke="#F28A5E" stroke-width="1.5"/><text x="43.6" y="201" fill="#261729">04</text>
+          </g>
+        </svg>
+        <div class="ring-center"><b>Em loop</b><small>A venda não é o fim: é o que alimenta o próximo ciclo.</small></div>
+      </div>
+    </div>
+    <p class="loop-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>Depois de evoluir, o ciclo recomeça em 01 com o que os clientes mostraram.</p>
     <div class="belief">
       <p>Mais importante do que outro brainstorming é ter cliente pagando.</p>
       <a class="text-link" href="/zero-to-first/" data-cta="method_ztf">Conhecer o método Zero to First
