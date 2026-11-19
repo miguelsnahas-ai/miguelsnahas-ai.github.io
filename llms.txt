@@ -13,6 +13,7 @@
 1. Abrir caminhos: modelo o negócio, analiso os números e mostro opções não óbvias.
 2. Dar foco: comparo os caminhos e ajudo a escolher o certo.
 3. Vender: transformo o caminho escolhido em oferta e coloco na mão do cliente.
+4. Evoluir: acompanho os primeiros resultados, ouço os clientes e ajusto oferta, preço e canal. O que aprendemos abre novos caminhos e o ciclo recomeça.
 
 Mais importante do que outro brainstorming é ter cliente pagando.
 
