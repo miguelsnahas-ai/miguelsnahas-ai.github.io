@@ -21,7 +21,7 @@ Mais importante do que outro brainstorming é ter cliente pagando.
 - Mapa de Caminhos: modelagem e análise do negócio, 2 a 3 caminhos possíveis com prós e contras e recomendação de foco.
 - Sprint de Primeira Venda: transformar o caminho escolhido em oferta e vendê-la em até 30 dias.
 - Programas e Workshops: educação empreendedora, palestras e jornadas sobre modelo de negócio, validação, vendas e IA no trabalho, para empresas, escolas e aceleradoras.
-- Mesa de Trabalho Zero to First: toolkit com IA para ir do zero ao primeiro cliente pagante, em pagamento único de R$ 27,90.
+- Mesa de Trabalho Zero to First: toolkit com IA para ir do zero ao primeiro cliente pagante, em pagamento único de R$ 47.
 
 ## Links
 - Site: https://miguelsnahas-ai.github.io/
